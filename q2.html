@@ -36,69 +36,77 @@
     <h3>open console for output</h3>
     <script>
         let weight = Number(prompt("enter the weight:"));
-        let destination = prompt("enter the destination:").toLowerCase();
-
-        if (weight <= 1) {
-            if (destination === "local") {
-                console.log(`the shipping cost for the item is : ${5}$`);
-            }
-            else if (destination === "national") {
-                console.log(`the shipping cost for the item is : ${8}$`);
-            }
-            else if (destination === "international") {
-                console.log(`the shipping cost for the item is : ${15}$`);
-            }
-            else {
-                console.log(`invalid destination`);
-            }
-        }
-        else if (weight > 1 && weight <= 5) {
-            if (destination === "local") {
-                console.log(`the shipping cost for the item is : ${10}$`);
-            }
-            else if (destination === "national") {
-                console.log(`the shipping cost for the item is : ${15}$`);
-            }
-            else if (destination === "international") {
-                console.log(`the shipping cost for the item is : ${30}$`);
-            }
-            else {
-                console.log(`invalid destination`);
-            }
-        }
-        else if (weight > 5 && weight <= 10) {
-            if (destination === "local") {
-                console.log(`the shipping cost for the item is : ${20}$`);
-            }
-            else if (destination === "national") {
-                console.log(`the shipping cost for the item is : ${25}$`);
-            }
-            else if (destination === "international") {
-                console.log(`the shipping cost for the item is : ${50}$`);
-            }
-            else {
-                console.log(`invalid destination`);
-            }
-        }
-
-        else if (weight > 10) {
-            if (destination === "local") {
-                console.log(`the shipping cost for the item is : ${30}$`);
-            }
-            else if (destination === "national") {
-                console.log(`the shipping cost for the item is : ${35}$`);
-            }
-            else if (destination === "international") {
-                console.log(`the shipping cost for the item is : ${70}$`);
-            }
-            else {
-                console.log(`invalid destination`);
-            }
+        let destination;
+        if (weight > 0) {
+            destination = prompt("enter the destination:").toLowerCase();
         }
         else {
-            console.log(`invalid input for number`)
+            console.log(`enter a weight greater than 0`);
         }
 
+        if (weight && destination) {
+            if (weight <= 1) {
+                if (destination === "local") {
+                    console.log(`the shipping cost for the item is : ${5}$`);
+                }
+                else if (destination === "national") {
+                    console.log(`the shipping cost for the item is : ${8}$`);
+                }
+                else if (destination === "international") {
+                    console.log(`the shipping cost for the item is : ${15}$`);
+                }
+                else {
+                    console.log(`invalid destination`);
+                }
+            }
+            else if (weight > 1 && weight <= 5) {
+                if (destination === "local") {
+                    console.log(`the shipping cost for the item is : ${10}$`);
+                }
+                else if (destination === "national") {
+                    console.log(`the shipping cost for the item is : ${15}$`);
+                }
+                else if (destination === "international") {
+                    console.log(`the shipping cost for the item is : ${30}$`);
+                }
+                else {
+                    console.log(`invalid destination`);
+                }
+            }
+            else if (weight > 5 && weight <= 10) {
+                if (destination === "local") {
+                    console.log(`the shipping cost for the item is : ${20}$`);
+                }
+                else if (destination === "national") {
+                    console.log(`the shipping cost for the item is : ${25}$`);
+                }
+                else if (destination === "international") {
+                    console.log(`the shipping cost for the item is : ${50}$`);
+                }
+                else {
+                    console.log(`invalid destination`);
+                }
+            }
+
+            else if (weight > 10) {
+                if (destination === "local") {
+                    console.log(`the shipping cost for the item is : ${30}$`);
+                }
+                else if (destination === "national") {
+                    console.log(`the shipping cost for the item is : ${35}$`);
+                }
+                else if (destination === "international") {
+                    console.log(`the shipping cost for the item is : ${70}$`);
+                }
+                else {
+                    console.log(`invalid destination`);
+                }
+            }
+            else {
+                console.log(`invalid input for number`)
+            }
+
+        }
     </script>
 </body>
 
